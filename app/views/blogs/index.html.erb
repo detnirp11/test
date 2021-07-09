@@ -1,0 +1,16 @@
+<h1>全ての投稿一覧</h1>
+
+<table>
+  <tr>
+    <th>タイトル</th>
+    <th>内容</th>
+  </tr>
+
+  <% @blogs.each do |blog| %>
+    <tr>
+      <td><%= blog.title %></td>
+      <td><%= blog.text %></td>
+      <td><%=link_to "編集する",edit_blog_path(blog.id) %></td>
+    </tr>
+  <% end %>
+</table>
